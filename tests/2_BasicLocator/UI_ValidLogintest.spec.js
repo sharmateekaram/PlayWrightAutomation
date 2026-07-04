@@ -1,6 +1,6 @@
 const {test, expect} = require('@playwright/test');
-c
-test.only('Browser login page Invalid to valid username and password', async ({browser})=>
+
+test('Browser login page Invalid to valid username and password', async ({browser})=>
 {
   
     const context = await browser.newContext();

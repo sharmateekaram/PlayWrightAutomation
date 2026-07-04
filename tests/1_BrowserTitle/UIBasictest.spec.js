@@ -21,7 +21,7 @@ test('Page Playwright test', async ({page})=>
 
 
 
-test.only('Title, URL', async ({page})=>
+test('Title, URL', async ({page})=>
 {
 
     await page.goto("https://rahulshettyacademy.com/client");
