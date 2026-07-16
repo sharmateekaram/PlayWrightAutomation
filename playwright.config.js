@@ -5,7 +5,8 @@ import { defineConfig, devices } from '@playwright/test';
  * @see https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
-  testDir: './tests/6_sessionStorage&Network',
+  //testDir: './tests/Assignment',
+  testDir: './tests/Assignment',
   timeout : 40*1000,
   expect : { timeout : 5*1000, },
   reporter : 'html',
