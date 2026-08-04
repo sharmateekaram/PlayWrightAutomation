@@ -10,9 +10,11 @@
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-
   "devDependencies": {
     "@playwright/test": "^1.60.0",
     "@types/node": "^25.3.0"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
   }
 }

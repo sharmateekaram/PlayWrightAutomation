@@ -40,4 +40,4 @@ constructor(apiContext,loginPayload){
 
 }
 
-module.exports = {APILoginOrderUtils}
+module.exports = {APILoginOrderUtils};

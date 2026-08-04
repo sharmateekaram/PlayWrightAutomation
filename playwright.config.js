@@ -6,7 +6,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   //testDir: './tests/Assignment',
-  testDir: './tests/Assignment',
+  testDir: './tests/9_PageObjectModel',
   timeout : 40*1000,
   expect : { timeout : 5*1000, },
   reporter : 'html',
