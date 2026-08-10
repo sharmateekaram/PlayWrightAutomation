@@ -1,30 +1,29 @@
-const {test, expect} = require('@playwright/test');
-const {POManager} = require('./POManager')
+const { expect} = require('@playwright/test');
+const { POManager } = require('./POManager');
 
-test.only('E2E order using page object WITH Page Object Manager', async ({browser})=>
- {
-    
+
+const { customeTest}= require('../Utils/customTest-data')
+
+
+customeTest('E2E + PO Manager + Custom Data', async ({browser,testDataForOrder})=>
+ {    
     const context = await browser.newContext();
     const page = await context.newPage();
-    const userEmailId =  "Akash@abc.com"
-    const userPswd = "Testing@11111"
-
     const pOManager = new POManager(page);
 
     const loginPage = pOManager.getLoginPage();
     await loginPage.goTo();
-    await loginPage.validLogin(userEmailId, userPswd);       
+    await loginPage.validLogin(testDataForOrder.userEmailId, testDataForOrder.userPswd);       
   
-    const productToAdd = "ZARA COAT 3";
     const addToCartPage = pOManager.getAddToCartPage();
-   await addToCartPage.addCart(productToAdd);
+   await addToCartPage.addCart(testDataForOrder.productToAdd);
 
     const cartPage = pOManager.getCartPage();
-    await cartPage.VerifyAddedToCartDetail(productToAdd);
+    await cartPage.VerifyAddedToCartDetail(testDataForOrder.productToAdd);
     await cartPage.clickOnCheckout();
 
     const paymentPage = pOManager.getPaymentPage();
-    await paymentPage.fillPaymentDetails("ind"," India", userEmailId );
+    await paymentPage.fillPaymentDetails(testDataForOrder.countrySortName, testDataForOrder.countryFullName, testDataForOrder.userEmailId );
     await paymentPage.submitPayment();
 
     const orderConfirmationPage = pOManager.getOrderConfirmationPage();

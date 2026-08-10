@@ -6,7 +6,7 @@ const filePath = "/Users/AKASH/Downloads/download.xlsx";
 
 
  
-test('Excel upload download', async ({page})=>
+test('@web Excel upload download', async ({page})=>
 {
     await page.goto("https://rahulshettyacademy.com/upload-download-test/index.html");
     const downloadPromise = page.waitForEvent('download');

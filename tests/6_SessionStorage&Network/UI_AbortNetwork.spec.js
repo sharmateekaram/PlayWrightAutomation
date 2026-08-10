@@ -1,7 +1,7 @@
 const {test, expect} = require('@playwright/test');
 const { request } = require('node:http');
 
-test.only('Print all request and response ', async ({browser})=>
+test('Print all request and response ', async ({browser})=>
 {
     const context = await browser.newContext();
     const page = await context.newPage();

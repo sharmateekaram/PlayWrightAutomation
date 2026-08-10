@@ -2,7 +2,7 @@ const {test, expect} = require('@playwright/test');
 //const path = require('node:path');
 
 
-test.only('Visual', async ({page})=>
+test('Visual', async ({page})=>
 {
 
    await page.goto("https://www.google.com/");
@@ -12,7 +12,7 @@ test.only('Visual', async ({page})=>
 });
 
 
-test('screenshort', async ({page})=>
+test('@web screenshort', async ({page})=>
 {
 
     await page.goto("https://www.google.com/");

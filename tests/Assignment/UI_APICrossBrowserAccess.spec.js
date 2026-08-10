@@ -18,7 +18,7 @@ async function loginEventHub(page) {
 }
 
 
-test.only('place order', async ({ page }) => {
+test('place order', async ({ page }) => {
     console.log("Step 1 — Login as Yahoo user via API");
     // - Use request.post() to call POST /api/auth/login - (Refer below API Doc link to construct )- https://api.eventhub.rahulshettyacademy.com/api/docs/#/Auth/post_auth_login)
     const apiContext = await request.newContext();

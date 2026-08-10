@@ -6,9 +6,8 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   //testDir: './tests/Assignment',
-  testDir: './tests',
+  testDir: './tests/9_PageObjectModel',
   timeout : 40*1000,
-  workers :5,
   expect : { timeout : 5*1000, },
   reporter : 'html',
   use: {
@@ -19,4 +18,11 @@ export default defineConfig({
   },
 
 });
+
+
+//interview run with diff config
+//npx playwright test <testfile name> --config <name of config file>
+//npx playwright test tests/9_PageObjectModel/UI_9_5_POManager_CustomDataFixture.spec.js --config playwright.config1.js
+
+
 

@@ -1,0 +1,16 @@
+[
+     {
+          "userEmailId"       :  "Akash@abc.com",
+          "userPswd"          :  "Testing@11111",
+          "productToAdd"      :  "ZARA COAT 3",
+          "countrySortName"   :  "ind",
+          "countryFullName"   :  " India"
+     },
+     {
+          "userEmailId"       :  "Roko@gmail.com",
+          "userPswd"          :  "Rohit@1234",
+          "productToAdd"      :  "ADIDAS ORIGINAL",
+          "countrySortName"   :  "United",
+          "countryFullName"   :  " United Arab Emirates"
+     }
+]
