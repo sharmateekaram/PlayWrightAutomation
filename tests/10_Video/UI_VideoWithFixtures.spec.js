@@ -114,7 +114,7 @@ test('Video with Page fixture', async ({ page }) => {
 });
 
 
-test.only('Video with Context fixture', async ({ context }) => {
+test('Video with Context fixture', async ({ context }) => {
     
    const page = await context.newPage();
    const products = page.locator(".card-body");

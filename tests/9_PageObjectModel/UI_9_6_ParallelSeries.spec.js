@@ -38,7 +38,7 @@ test(' @web 1 E2E + page object WITH Page Object Manager + JSON  data', async ({
 });
 
 
-test('2 E2E + page object WITH Page Object Manager + JSON  data', async ({ browser }) => {
+test('@Reg 2 E2E + page object WITH Page Object Manager + JSON  data', async ({ browser }) => {
 
    const context = await browser.newContext();
    const page = await context.newPage();
@@ -103,3 +103,19 @@ test('3 E2E + page object WITH Page Object Manager + JSON  data', async ({ brows
 //interview to  run with tag
 //npx playwright test --config playwright.config2.js --grep "@web" 
 //npx playwright test --grep "@web" 
+//npx playwright test --grep "@Web" --reporter=line,allure-playwright
+//allure generate ./allure-results --clean   to generate allure report from allure results
+//allure open ./allure-report  to open allure report from allure report
+
+
+
+//IF WANT TO GENERATE OPEN ALLURE REPORT IN ONE  GO
+//package.json
+// "scripts":{
+//     "RegAllureServe": "npx playwright test --grep \"@Reg\" && npx allure serve allure-results"
+// }
+//playwrightconfig.js
+// reporter : [
+//     ['html',{open: 'never'}],
+//     ['allure-playwright']
+//   ],

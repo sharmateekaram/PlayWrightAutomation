@@ -4,7 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test"
+    "test": "npx playwright test",
+    "WebTest": "npx playwright test --grep \"@Web\"",
+    "APITest": "npx playwright test --grep \"@API\"",
+    "fireFoxTopic9": "npx playwright test tests/9_PageObjectModel --config playwright.config1.js --project=firefox1",
+    "ChromeHeadless9_5": "npx playwright test tests/9_PageObjectModel/UI_9_5_POManager_CustomDataFixture.spec.js --config playwrightProject.config.js --project=\"chrome1 headless1\"",
+    "AllOptionTopic9": "npx playwright test tests/9_PageObjectModel/UI_9_5_POManager_CustomDataFixture.spec.js --config playwright.config1.js",
+    "fireFox": "npx playwright test tests/9_PageObjectModel --config playwright.config1.js --project=firefox1",
+    "WebTestAllure": "npx playwright test --grep \"@Web\" --reporter=line,allure-playwright",
+    "GenerateAllure": "allure generate ./allure-results --clean",
+    "OpenAllure": "allure open ./allure-report",
+    "RegAllure": "npx playwright test --grep \"@Reg\" && npx allure generate allure-results --clean && npx allure open allure-report",
+    "RegAllureServe": "npx playwright test --grep \"@Reg\" && npx allure serve allure-results",
+    "orderE2E": "npx playwright test tests/9_PageObjectModel/UI_9_4_POManager_JsonDataSet.spec.js",
+
+    "CucumberRun":"npx cucumber-js"
   },
   "keywords": [],
   "author": "",
@@ -12,9 +26,11 @@
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "^1.60.0",
-    "@types/node": "^25.3.0"
+    "@types/node": "^25.3.0",
+    "allure-playwright": "^3.10.2"
   },
   "dependencies": {
+    "@cucumber/cucumber": "^13.2.1",
     "exceljs": "^4.4.0"
   }
 }

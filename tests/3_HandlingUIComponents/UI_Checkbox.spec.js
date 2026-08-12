@@ -12,7 +12,7 @@ test('UI blinking text', async ({page})=>
 });
 
 
-test('UI checkbox', async ({page})=>
+test('@Reg UI checkbox', async ({page})=>
 {
     await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
     const chekboxTerm = page.locator("#terms");

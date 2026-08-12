@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","40715","@web 1 E2E + page object WITH Page Object Manager + JSON data","","2026-08-10","broken","2026-08-10","","9_PageObjectModel\UI_9_6_ParallelSeries.spec.js","",""
+"","18428","@web screenshort","","2026-08-10","failed","2026-08-10","","7_Screenshot&visual\UI_Screenshot&visual.spec.js","",""
+"","42101","@web E2E order using page object WITH Page Object Manager","","2026-08-10","broken","2026-08-10","","9_PageObjectModel\UI_9_2_POManager_E2E.spec.js","",""
+"","40817","@web UI child window","","2026-08-10","broken","2026-08-10","","3_HandlingUIComponents\UI_ChildWindow.spec.js","",""
+"","4242","@web Excel upload download","","2026-08-10","failed","2026-08-10","","8_ExcelUploadDownload\UI_ExcelUploadDownload.spec.js","",""

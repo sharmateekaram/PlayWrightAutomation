@@ -1,0 +1,11 @@
+[ 'ADIDAS ORIGINAL', 'ZARA COAT 3', 'iphone 13 pro' ]
+ADIDAS ORIGINAL
+ZARA COAT 3
+[ 'ZARA COAT 3' ]
+3
+ British Indian Ocean Territory
+ India
+find ittttttttttttttttt
+ Thankyou for the order. 
+ | 6a79f88885b8849b493e5ec6 | 
+Count of table's Rows :  8
