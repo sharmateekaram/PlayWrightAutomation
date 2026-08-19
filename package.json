@@ -17,8 +17,15 @@
     "RegAllure": "npx playwright test --grep \"@Reg\" && npx allure generate allure-results --clean && npx allure open allure-report",
     "RegAllureServe": "npx playwright test --grep \"@Reg\" && npx allure serve allure-results",
     "orderE2E": "npx playwright test tests/9_PageObjectModel/UI_9_4_POManager_JsonDataSet.spec.js",
-
-    "CucumberRun":"npx cucumber-js"
+    "CucumberRun": "npx cucumber-js",
+    "CucumberEcom": "npx cucumber-js features/Ecommece.feature --exit",
+    "CucumberErrorEcom": "npx cucumber-js features/ErrorEcommece.feature",
+    "CucumberSpecificFileWithTag": "npx cucumber-js features/ErrorEcommece.feature --tags \"@Login\"",
+    "CucumberWithTag": "npx cucumber-js  --tags \"@Login\"",
+    "CucumberANDTag": "npx cucumber-js  --tags \"@Login or @Regression\"",
+    "CucumberORTag": "npx cucumber-js  --tags \"@Login and @Regression\"",
+    "CucumberExcludeTag": "npx cucumber-js  --tags \"@Login and NOT @Regression\"",
+    "CucumberAdvanceTag": "npx cucumber-js  --tags \"(@Login or @Sanity)  and  @Regression\""
   },
   "keywords": [],
   "author": "",

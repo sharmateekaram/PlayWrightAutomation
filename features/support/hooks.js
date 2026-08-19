@@ -2,9 +2,10 @@
 const { Before, After, BeforeStep, AfterStep, Status } = require("@cucumber/cucumber");
 const { POManager } = require('../../tests/9_PageObjectModel/POManager');
 const { chromium } = require('playwright');
-const path = require("node:path");
+
 
 Before(async function(){
+     console.log("I execute First------------------")
     this.browser = await chromium.launch({
         headless: false
     });
@@ -47,6 +48,7 @@ After(async function (scenario) {
             console.log("Browser  is closed");
             await this.browser.close();
         }
+        console.log("------------------I execute LAST")
     } catch (error) {
         console.error("Error during browser teardown:", error);
     }
