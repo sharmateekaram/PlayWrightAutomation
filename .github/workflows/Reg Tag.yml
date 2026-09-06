@@ -1,12 +1,8 @@
-
-
 name: Playwright Tests
 on:
-  # push:
-  #   branches: [ main, master ]
-  # pull_request:
-  #   branches: [ main, master ]
-  workflow_dispatch: 
+     push:
+      tags:
+        - "@Regression"
 jobs:
   test:
     timeout-minutes: 60
