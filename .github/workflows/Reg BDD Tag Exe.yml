@@ -1,6 +1,6 @@
 
 
-name: Reg BDD Tag Exe file
+name: Reg BDD Tag using npx
 on:
   # push:
   #   branches: [ main, master ]

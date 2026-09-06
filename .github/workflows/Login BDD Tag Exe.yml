@@ -1,6 +1,6 @@
 
 
-name: Reg BDD Tag Exe file
+name: Login BDD Tag using NPM
 on:
   # push:
   #   branches: [ main, master ]
