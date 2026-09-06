@@ -1,6 +1,6 @@
 const {test, expect} = require('@playwright/test');
 
-test('Browser Context Playwright test', async ({browser})=>
+test('@Regression Browser Context Playwright test', async ({browser})=>
     {
         //just for  test in akash_fix
         const context = await browser.newContext();
