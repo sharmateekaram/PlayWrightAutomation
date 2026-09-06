@@ -25,7 +25,10 @@
     "CucumberANDTag": "npx cucumber-js  --tags \"@Login or @Regression\"",
     "CucumberORTag": "npx cucumber-js  --tags \"@Login and @Regression\"",
     "CucumberExcludeTag": "npx cucumber-js  --tags \"@Login and NOT @Regression\"",
-    "CucumberAdvanceTag": "npx cucumber-js  --tags \"(@Login or @Sanity)  and  @Regression\""
+    "CucumberAdvanceTag": "npx cucumber-js  --tags \"(@Login or @Sanity)  and  @Regression\"",
+    "CucumberParallel": "npx cucumber-js features/ErrorEcommece.feature --parallel 4 --exit",
+    "CucumberParallelHtml": "npx cucumber-js features/ErrorEcommece.feature --parallel 4 --exit --format html:cucumber-report.html",
+    "CucumberParallelHtmlRetry": "npx cucumber-js features/ErrorEcommece.feature --parallel 4 --retry 1 --exit --format html:cucumber-report.html"
   },
   "keywords": [],
   "author": "",
@@ -34,7 +37,8 @@
   "devDependencies": {
     "@playwright/test": "^1.60.0",
     "@types/node": "^25.3.0",
-    "allure-playwright": "^3.10.2"
+    "allure-playwright": "^3.10.2",
+    "playwright-bdd": "^9.2.0"
   },
   "dependencies": {
     "@cucumber/cucumber": "^13.2.1",

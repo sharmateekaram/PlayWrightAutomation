@@ -5,7 +5,7 @@ const { chromium } = require('playwright');
 
 
 Before(async function(){
-     console.log("I execute First------------------")
+     console.log("I execute First------------------------------------------------------")
     this.browser = await chromium.launch({
         headless: false
     });
@@ -14,15 +14,20 @@ Before(async function(){
     this.pOManager = new POManager(this.page);
 })
 
+Before( {tags: "@Regression"}, function () {
+     console.log(`------Before Only Regression tag===================`);
+    
+})
+
 
 BeforeStep(function(scenario){
-   console.log(`-------------------Before  scenario: ${scenario.pickleStep.name}`);
+   console.log(`---Before  scenario: ${scenario.pickleStep.name}`);
 })
 
 
 AfterStep(async function ({result}){
     if(result.status === Status.FAILED){ 
-         console.log(`-----------Faileddddddd`);
+         console.log(`---FAILEDDDDDD`);
          const screenshotPath = `cucumberfailed_step_${Date.now()}.png`;       
         await this.page.screenshot({path:screenshotPath});
     }    
@@ -48,7 +53,7 @@ After(async function (scenario) {
             console.log("Browser  is closed");
             await this.browser.close();
         }
-        console.log("------------------I execute LAST")
+        console.log("------------------------------------------------I execute LAST")
     } catch (error) {
         console.error("Error during browser teardown:", error);
     }
