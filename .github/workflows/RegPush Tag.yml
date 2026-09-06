@@ -1,4 +1,4 @@
-name: RegressionPush Tag Test
+name: Regression Push Tag Test
 on:
      push:
       tags:
