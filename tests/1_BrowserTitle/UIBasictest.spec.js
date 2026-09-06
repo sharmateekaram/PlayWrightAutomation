@@ -2,11 +2,13 @@ const {test, expect} = require('@playwright/test');
 
 test('Browser Context Playwright test', async ({browser})=>
     {
+        //just for  test in akash_fix
         const context = await browser.newContext();
         const page = await context.newPage() ;
         await page.goto("https://rahulshettyacademy.com/");
         const title =  await page.title();
         console.log(title);
+         console.log(title);
         await expect(page).toHaveTitle('Rahul Shetty Academy | QA Automation, Playwright, AI Testing & Online Training');
         
     });
