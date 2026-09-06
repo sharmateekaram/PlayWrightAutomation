@@ -24,6 +24,7 @@
     "CucumberWithTag": "npx cucumber-js  --tags \"@Login\"",
     "CucumberANDTag": "npx cucumber-js  --tags \"@Login or @Regression\"",
     "CucumberORTag": "npx cucumber-js  --tags \"@Login and @Regression\"",
+    "test:cucumberLoginTag": "npx cucumber-js  --tags \"@Login\"",
     "CucumberExcludeTag": "npx cucumber-js  --tags \"@Login and NOT @Regression\"",
     "CucumberAdvanceTag": "npx cucumber-js  --tags \"(@Login or @Sanity)  and  @Regression\"",
     "CucumberParallel": "npx cucumber-js features/ErrorEcommece.feature --parallel 4 --exit",
@@ -35,13 +36,13 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@cucumber/cucumber": "^13.2.1",
     "@playwright/test": "^1.60.0",
     "@types/node": "^25.3.0",
     "allure-playwright": "^3.10.2",
     "playwright-bdd": "^9.2.0"
   },
   "dependencies": {
-    "@cucumber/cucumber": "^13.2.1",
     "exceljs": "^4.4.0"
   }
 }
