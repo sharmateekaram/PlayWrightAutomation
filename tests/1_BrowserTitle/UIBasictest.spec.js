@@ -8,6 +8,7 @@ test('Browser Context Playwright test', async ({browser})=>
         await page.goto("https://rahulshettyacademy.com/");
         const title =  await page.title();
         console.log(title);
+         console.log(title);
         await expect(page).toHaveTitle('Rahul Shetty Academy | QA Automation, Playwright, AI Testing & Online Training');
         
     });
